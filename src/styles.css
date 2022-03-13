@@ -1,0 +1,143 @@
+/* --GLOBAL-- */
+
+:root {
+  --cuttingBoard: url('images/cuttingBoard.jpg');
+}
+
+body {
+  margin: 0;
+  background-size: cover;
+}
+
+button {
+  font-size: 3rem;
+  height: fit-content;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:active {
+  background-color: white;
+  transition: none;
+}
+
+/* --HEADER-- */
+
+header {
+  background-image: var(--cuttingBoard);
+  background-size: cover;
+  background-position: center 19%;
+  height: 20vh;
+  box-shadow: 0px 5px 15px;
+  display: flex;
+}
+
+header > * {
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: rgba(255, 233, 200, 0.712);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuButton {
+  color: red;
+}
+
+#orderButton {
+  color: green;
+}
+
+header > div {
+  height: inherit;
+}
+
+img[alt="Marcello's Pizza Grill"] {
+  object-fit: scale-down;
+  height: inherit;
+}
+
+/* --MAIN-- */
+
+main {
+  margin: 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 3rem;
+}
+
+/* --MENU-- */
+
+#menuContainer {
+  width: 95vw;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-rows: fit-content fit-content;
+  gap: 50px;
+  margin: 20px;
+}
+
+#menuContainer > *:nth-child(4n + 2) {
+  overflow: hidden;
+}
+
+#menuContainer > *:nth-child(4n + 0) {
+  grid-column: 1 / span 3;
+  
+}
+
+#menuContainer img {
+  height: inherit;
+  width: 120px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px;
+  margin-right: 10%;
+  float: left;
+}
+
+/* --ORDER-- */
+
+#orderContainer {
+  font-size: 1.5rem;
+}
+
+#orderContainer a {
+  color: blue;
+}
+
+/* --FOOTER-- */
+
+footer {
+  height: 40px;
+  background-image: linear-gradient(rgba(100, 42, 9, .5), rgba(100, 42, 9, .5)), var(--cuttingBoard);
+  box-shadow: 0px -5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
